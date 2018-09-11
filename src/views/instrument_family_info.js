@@ -5,7 +5,11 @@ const InstrumentFamilyInfo = function (container) {
 };
 
 InstrumentFamilyInfo.prototype.bindEvents = function () {
+  PubSub.subscribe('InstrumentFamilies:family-info', (event) => {
+    const info = event.detail
+    console.log(event.detail);
 
+  })
 };
 
 module.exports = InstrumentFamilyInfo;
