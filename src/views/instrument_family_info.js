@@ -14,6 +14,9 @@ InstrumentFamilyInfo.prototype.bindEvents = function () {
 
 InstrumentFamilyInfo.prototype.renderInfo = function (info) {
 
+  //reset container
+  this.container.innerHTML = ''
+
   //title
   this.addContent('h2', info.name);
 
