@@ -13,24 +13,24 @@ InstrumentFamilyInfo.prototype.bindEvents = function () {
 };
 
 InstrumentFamilyInfo.prototype.renderInfo = function (info) {
-  console.log(info.name);
+
   //title
-  const title = document.createElement('h2')
-  title.textContent = info.name;
-  this.container.appendChild(title);
+  this.addContent('h2', info.name);
 
   //description
-  const description = document.createElement('h3')
-  description.textContent = info.description;
-  this.container.appendChild(description);
+  this.addContent('h3', info.description);
 
-  //
+  //instruments
+  this.addContent('ul', "Instruments:")
 
 };
 
-// const infoParagraph = document.createElement('p');
-//   infoParagraph.textContent = `The ${animal.species}, of class '${animal.class}', has a maximum speed of ${animal.maxSpeed} km/h.`;
-//   this.container.innerHTML = '';
-//   this.container.appendChild(infoParagraph);
+InstrumentFamilyInfo.prototype.addContent = function (tag, text) {
+  const content = document.createElement(tag);
+  content.textContent = text;
+  this.container.appendChild(content);
+};
+
+
 
 module.exports = InstrumentFamilyInfo;
