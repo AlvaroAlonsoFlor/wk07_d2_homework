@@ -1,3 +1,6 @@
+const PubSub = require('../helpers/pub_sub.js');
+const PubSub = require('../models/select_view.js');
+
 const InstrumentFamilies = function() {
   this.instrumentFamilies = [
     {
@@ -26,6 +29,11 @@ const InstrumentFamilies = function() {
       instruments: ['piano', 'organ', 'electronic keyboard', 'synthesizer']
     }
   ];
+};
+
+InstrumentFamilies.prototype.bindEvents = function () {
+  PubSub.publish('InstrumentFamilies:all', this.instrumentFamilies )
+
 };
 
 module.exports = InstrumentFamilies;
