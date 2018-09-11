@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectElement = document.querySelector('#instrument-families')
   const selectView = new SelectView(selectElement);
   selectView.bindEvents();
-  console.log('select view:',selectView.element);
 
   //families
   const instrumentFamilies = new InstrumentFamilies();
