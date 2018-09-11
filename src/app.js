@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   selectView.bindEvents();
 
   //instrumentFamilyInfo
-  const selectContainer = 
+  const selectContainer = document.querySelector(".info-box");
+  const selectFamilyInfo = new InstrumentFamilyInfo(selectContainer);
+  selectFamilyInfo.bindEvents()
 
   //families
   const instrumentFamilies = new InstrumentFamilies();
