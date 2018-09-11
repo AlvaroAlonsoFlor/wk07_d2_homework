@@ -21,14 +21,18 @@ InstrumentFamilyInfo.prototype.renderInfo = function (info) {
   this.addContent('h3', info.description);
 
   //instruments
-  this.addContent('ul', "Instruments:")
+  this.addContent('ul', "Instruments:", this.container)
+  ul = document.querySelector('ul')
+  info.instruments.map((instrument) => {
+    this.addContent('li', instrument, ul)
+  });
 
 };
 
-InstrumentFamilyInfo.prototype.addContent = function (tag, text) {
+InstrumentFamilyInfo.prototype.addContent = function (tag, text, parent = this.container) {
   const content = document.createElement(tag);
   content.textContent = text;
-  this.container.appendChild(content);
+  parent.appendChild(content);
 };
 
 
