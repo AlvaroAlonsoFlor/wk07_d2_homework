@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectView = new SelectView(selectElement);
   selectView.bindEvents();
 
+  //instrumentFamilyInfo
+  const selectContainer = 
+
   //families
   const instrumentFamilies = new InstrumentFamilies();
   instrumentFamilies.bindEvents();
