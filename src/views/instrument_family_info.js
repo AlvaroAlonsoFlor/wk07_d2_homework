@@ -15,7 +15,7 @@ InstrumentFamilyInfo.prototype.bindEvents = function () {
 InstrumentFamilyInfo.prototype.renderInfo = function (info) {
 
   //reset container
-  this.container.innerHTML = ''
+  this.container.innerHTML = '';
 
   //title
   this.addContent('h2', info.name);
@@ -24,7 +24,7 @@ InstrumentFamilyInfo.prototype.renderInfo = function (info) {
   this.addContent('h3', info.description);
 
   //instruments
-  this.addContent('ul', "Instruments:", this.container)
+  this.addContent('ul', "Instruments:")
   ul = document.querySelector('ul')
   info.instruments.map((instrument) => {
     this.addContent('li', instrument, ul)
